@@ -1,0 +1,36 @@
+Collecting featuretools (from -r /home/nbuser/library/requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/82/ef/4a128fe3b1650dc7ec1c35004f12fc80df317e40f7b59901de267468b4a6/featuretools-0.1.20.tar.gz (138kB)
+Requirement already satisfied: numpy>=1.13.3 in ./anaconda3_501/lib/python3.6/site-packages (from featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (1.14.3)
+Collecting scipy>=1.0.0 (from featuretools->-r /home/nbuser/library/requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/a8/0b/f163da98d3a01b3e0ef1cab8dd2123c34aee2bafbb1c5bffa354cc8a1730/scipy-1.1.0-cp36-cp36m-manylinux1_x86_64.whl (31.2MB)
+Requirement already satisfied: pandas>=0.20.3 in ./anaconda3_501/lib/python3.6/site-packages (from featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (0.20.3)
+Collecting s3fs>=0.1.2 (from featuretools->-r /home/nbuser/library/requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/45/5f/c4a127ef4d50f12340fc3fe1646923dbaf82c82b6a150bbceb162c140a8a/s3fs-0.1.5.tar.gz
+Requirement already satisfied: tqdm>=4.19.2 in ./anaconda3_501/lib/python3.6/site-packages (from featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (4.23.2)
+Requirement already satisfied: toolz>=0.8.2 in ./anaconda3_501/lib/python3.6/site-packages (from featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (0.8.2)
+Requirement already satisfied: pyyaml>=3.12 in ./anaconda3_501/lib/python3.6/site-packages (from featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (3.12)
+Requirement already satisfied: cloudpickle>=0.4.0 in ./anaconda3_501/lib/python3.6/site-packages (from featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (0.4.0)
+Requirement already satisfied: future>=0.16.0 in ./anaconda3_501/lib/python3.6/site-packages (from featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (0.16.0)
+Requirement already satisfied: pympler>=0.5 in ./anaconda3_501/lib/python3.6/site-packages (from featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (0.5)
+Requirement already satisfied: python-dateutil>=2 in ./anaconda3_501/lib/python3.6/site-packages (from pandas>=0.20.3->featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (2.6.1)
+Requirement already satisfied: pytz>=2011k in ./anaconda3_501/lib/python3.6/site-packages (from pandas>=0.20.3->featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (2017.2)
+Requirement already satisfied: botocore in ./anaconda3_501/lib/python3.6/site-packages (from s3fs>=0.1.2->featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (1.8.50)
+Requirement already satisfied: boto3 in ./anaconda3_501/lib/python3.6/site-packages (from s3fs>=0.1.2->featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (1.4.8)
+Requirement already satisfied: six>=1.5 in ./anaconda3_501/lib/python3.6/site-packages (from python-dateutil>=2->pandas>=0.20.3->featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (1.11.0)
+Requirement already satisfied: docutils>=0.10 in ./anaconda3_501/lib/python3.6/site-packages (from botocore->s3fs>=0.1.2->featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (0.14)
+Requirement already satisfied: jmespath<1.0.0,>=0.7.1 in ./anaconda3_501/lib/python3.6/site-packages (from botocore->s3fs>=0.1.2->featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (0.9.3)
+Requirement already satisfied: s3transfer<0.2.0,>=0.1.10 in ./anaconda3_501/lib/python3.6/site-packages (from boto3->s3fs>=0.1.2->featuretools->-r /home/nbuser/library/requirements.txt (line 1)) (0.1.13)
+Building wheels for collected packages: featuretools, s3fs
+  Running setup.py bdist_wheel for featuretools: started
+  Running setup.py bdist_wheel for featuretools: finished with status 'done'
+  Stored in directory: /home/nbuser/.cache/pip/wheels/71/17/99/608a42fc5d3a7a2ceea9c0540dcd0eead07c59feb5398a23ba
+  Running setup.py bdist_wheel for s3fs: started
+  Running setup.py bdist_wheel for s3fs: finished with status 'done'
+  Stored in directory: /home/nbuser/.cache/pip/wheels/ce/ad/af/891f2ad3a0702ce5064c382ea50d4502315443f25c1f3842cf
+Successfully built featuretools s3fs
+grpcio 1.11.0 has requirement protobuf>=3.5.0.post1, but you'll have protobuf 3.4.1 which is incompatible.
+Installing collected packages: scipy, s3fs, featuretools
+  Found existing installation: scipy 0.19.1
+    Uninstalling scipy-0.19.1:
+      Successfully uninstalled scipy-0.19.1
+Successfully installed featuretools-0.1.20 s3fs-0.1.5 scipy-1.1.0

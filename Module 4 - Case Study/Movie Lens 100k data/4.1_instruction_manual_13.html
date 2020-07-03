@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"183a626256",applicationID:"212104247"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":1,"licenseKey":"183a626256","agent":"","transactionName":"M1BTbEVQWEoEBUJcDgoad01ZUkJQCggZWhEBW1RcTx9VVhcDGFELBVtWV1ZBRkpLBVlbFQFbRUtSQ0BcF0hbXAUAWVRPVkNTAzYSV0EIB3ZeVkNUWE02A0RDBBYbQUpYUlNKFjlEUBARUEJM","atts":"HxdEGg1KFEsAF0NQEhBqQ11RVERcF0QMFwkQQUFLDR4ZWgoTREYEFxtJSEVeGFQMEhhQBREaUldCQ0VcFklVWhQWRlQVQQAMQTU0eR4lN00aagYCGVoKE0RGBBNUQ10YCQ4PAAADUQNWBwgLA1AOXAcHDgYCUANUCQ5SA10AAg4aU1FXB1sPBAVaAwQPAQNcUwgAD1QBClRXAFRTBwAACwAeBwYEBUJcFwVBVGdVXVlaDjlfUVwGWV5bXBxACEBVd00xNnoUCnV1ZUFAVHRnUFcQA3pDSEZcQFIGQwQWQVhbVl0TCycEWloCDxAFCFQEUFtWA1RWBFFXVwxVAA5YA1EOV1FdAFQIDlBVWwMCFBlDEUZUSmhYUhtfVw4DWFwZE1tYX0JcCxJFUBMSUEMWUUNZVDoFUltDXlNQVERUGhsGCVhBBApBQl1FR1NLSwVZWxUBW0VnW1RYG19UBgZVXRkTW1hfQlwLEkVQExJQQxZHUEJRR1wUAU9ValhWREVETAYSX1oPO1hQVkJQWmZUVRhdFQlZExQVUllXEQNYQRIBR0ddRR9VVgsSU1sVO0FISFITDBsRA05BTgxBXFQVHRRLABdDUBIQalBNQ1lpTRwWUxdbRkZUS0RYWVdICUQYFApeX1dAXxQVRwlEUkNeF0loZX4UFUcFWUATF1BuUVMTDBsGCUNHEgEYRwkNSWZrKk1yZhlPZwALFR0USwAXQ1ASEGpbT0NuVVYKDV9QQ14XX1dDHERcFBNTRhUBURMUFVJZVxEDWEESAUdHXUUfWlYGDVNRQ15TUFREVBobFwNHQAQXQW5NRFREZgQBU1sVRg8TdVhLX1UJBxkAT1QVGW9eX1JWEhUWezVEBAEWBwoWbgwIAAFaRE0HDB4Rd0kVClNiBAZ+WEwYBAUOS1UAFUkvfWV1ex0WVQwNUxUmAVZaVx4RdVEXCVtQTlwGHwgZBQcJVkgABEE3VFdZRVgZDFZRGAZXRkhM","applicationID":"212104247","errorBeacon":"bam.nr-data.net","applicationTime":66}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.1</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="case-study-4.1---movies">Case Study 4.1 - Movies</h1>
+<p><img src="https://i.imgur.com/Ngzqv87.png" alt=""></p>
+<h2 id="helpful-links">Helpful Links</h2>
+<ul>
+<li><a href="https://courses.xpro.mit.edu/courses/course-v1:xPRO+DSx+R13/courseware/886ef5db22934a8eba83c46e19c5ded8/25b6c853cfb94b8f988e73116a2c5137/1">MITx Case Study Page</a></li>
+<li><a href="https://courses.xpro.mit.edu/courses/course-v1:xPRO+DSx+R13/discussion/forum/">Discussion Forum</a></li>
+<li><a href="https://courses.xpro.mit.edu/asset-v1:xPRO+DSx+R13+type@asset+block@4_1_Rubric.pdf">Case Study Evaluation Rubric</a></li>
+<li><a href="#faq">Frequently Asked Questions</a></li>
+</ul>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#logistics">Logistics</a></li>
+<li><a href="#setup">Setup</a></li>
+</ul>
+</li>
+<li><a href="#during">During</a>
+<ul>
+<li><a href="#import">Import</a></li>
+<li><a href="#data">Data</a></li>
+<li><a href="#cross-validation">Cross Validation</a></li>
+<li><a href="#model-1-random">Model 1: Random</a></li>
+<li><a href="#model-2-user-based-collaborative-filtering">Model 2: User-Based Collaborative Filtering</a></li>
+<li><a href="#model-3-item-based-collaborative-filtering">Model 3: Item-Based Collaborative Filtering</a></li>
+<li><a href="#model-4-matrix-factorization">Model 4: Matrix Factorization</a></li>
+<li><a href="#precision-and-recall--k">Precision and Recall @ <code>k</code></a></li>
+<li><a href="#top-n-predictions">Top-<code>n</code> Predictions</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion</a>
+<ul>
+<li><a href="#submitting">Submitting</a></li>
+<li><a href="#next-steps">Next Steps</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>The purpose of this document is to show you how to complete the first graded case study of the course. The goal of this case study is to <strong>experiment with various recommendation models for predicting user preferences for movies.</strong></p>
+<p><span id="objectives"></span>You will gain practical experience in:</p>
+<ul>
+<li><strong>loading</strong> a large dataset</li>
+<li><strong>creating</strong> various models</li>
+<li><strong>evaluating</strong> the predictions of those models</li>
+<li><strong>utilizing</strong> tools like <a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">cross validation</a> to train and test models</li>
+<li><strong>understanding</strong> metrics like <a href="https://en.wikipedia.org/wiki/Root-mean-square_deviation">RMSE</a>, <a href="https://medium.com/@m_n_malaeb/recall-and-precision-at-k-for-recommender-systems-618483226c54">precision and recall <code>@k</code></a> and top <code>n</code> recommendations</li>
+</ul>
+<h3 id="logistics">Logistics</h3>
+<p>Here is how this case study will work.</p>
+<p>You can follow along with the instructions in this document. They correspond to the code provided and activity template you will fill out to complete the case study. We have blank sections in the code where you can write your responses to our questions. These sections will be marked <strong>RED</strong> so you won’t miss them. Some responses will include code, while others will not. We do our best to make this clear where needed.</p>
+<p>Once you complete the case study, you will <a href="#submitting">submit your work</a> to the online MITx platform. From there, the system will assign you 2 peers to review. You will grade their submissions according to the provided <a href="https://courses.xpro.mit.edu/asset-v1:xPRO+DSx+R13+type@asset+block@4_1_Rubric.pdf">evaluation rubric</a>. <strong>We recommend you check out this rubric now, so you know how you will be graded.</strong></p>
+<p><span id="dates"></span>Here are the key dates for this case study:</p>
+<ol>
+<li><strong>By 23:59 UTC, Sunday, June 7, 2020.</strong> Submit your case study to MITx. Be sure to <a href="https://www.google.com/search?q=utc+to+local+time">convert to your local time zone</a>.</li>
+<li><strong>By 23:59 UTC, Monday, June 8, 2020.</strong> Complete the peer reviews for 2 of your peers. (If the system does not give you 2 reviews, see the <a href="#next-steps"><em><strong>Next Steps</strong></em></a> section below for what to do. But, it is critical you complete any reviews you are assigned.)</li>
+</ol>
+<h3 id="setup">Setup</h3>
+<p>Follow these steps to get set up with the code and submission template for the case study.</p>
+<ol>
+<li>
+<p>If you have not already done so, follow the instructions for <a href="https://courses.xpro.mit.edu/asset-v1:xPRO+DSx+R13+type@asset+block@azure_13.html">getting started with Microsoft Azure Notebooks</a>. You will need to create and confirm your account there before proceeding to step 2.</p>
+</li>
+<li>
+<p><strong>Clone</strong> the case study library, which can be found <a href="https://notebooks.azure.com/dsx-mitxpro/libraries/dsx-cs4">here</a>. Go to that page and click the <em>Clone</em> button to copy the code to your personal library. The dialog should look something like this:<br>
+<img src="https://i.imgur.com/WUegXr2.png" alt="Clone library."></p>
+</li>
+<li>
+<p><strong>Select your language.</strong> We support <strong>both</strong> Python and R in this case study. The remainder of this document will provide instructions for both languages, in the following format:</p>
+
+<table>
+<thead>
+<tr>
+<th>Python</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some python information here…</td>
+<td>Some R information here…</td>
+</tr>
+</tbody>
+</table></li>
+<li>
+<p><strong>Select your experience level.</strong> We have support for both <em>beginner</em> and <em>advanced</em> users of Python and R in this case study. Use the following chart to see the name of the notebook you should use, based on your experience level.</p>
+
+<table>
+<thead>
+<tr>
+<th>Proficiency</th>
+<th>Python</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beginner</td>
+<td><code>beginner_python.ipynb</code></td>
+<td><code>beginner_r.ipynb</code></td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td><code>advanced_python.ipynb</code></td>
+<td><code>advanced_r.ipynb</code></td>
+</tr>
+</tbody>
+</table></li>
+<li>
+<p>Open the notebook file you selected from the table above. This will start up the Jupyter notebook. If you need a refresher on how to work with a notebook, we have information for you <a href="https://courses.xpro.mit.edu/asset-v1:xPRO+DSx+R13+type@asset+block@azure_13.html#using-a-notebook">here</a>.</p>
+</li>
+<li>
+<p>As described above, this notebook file will be the template you use to record your answers. So, before you do anything else, be sure to fill in the information in the <em><strong>Identification Information</strong></em> section at the top of the notebook.</p>
+</li>
+<li>
+<p>Next, go to the <em><strong>Setup</strong></em> section and follow the instructions. This will <strong>install</strong> all the packages you need to complete the remainder of the case study.</p>
+</li>
+</ol>
+<h2 id="during">During</h2>
+<p>Great! Now, you should be all set up and ready to complete this case study. As stated above, we are going to be using a recommendation system to predict movies for users, based on an existing dataset. This document will walk you through how to work with this data and framework to arrive at some meaningful results!</p>
+<p><strong>Remember our tip from our first Microsoft Azure Notebooks tutorial: <a href="https://courses.xpro.mit.edu/asset-v1:xPRO+DSx+R13+type@asset+block@azure_13.html#saving"><em>save your notebook often</em></a> to avoid losing your work!</strong></p>
+<h3 id="import">Import</h3>
+<p>One of the first steps in any data science task is importing the necessary tools you will use.</p>
+<p>See the <em><strong>Import</strong></em> section of your notebook and follow the instructions to import the required tools. See the table below for these requirements, for your reference.</p>
+
+<table>
+<thead>
+<tr>
+<th>Python</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://surpriselib.com/"><code>surprise</code></a></td>
+<td><a href="https://www.rdocumentation.org/packages/recommenderlab/"><code>recommenderlab</code></a></td>
+</tr>
+</tbody>
+</table><h3 id="data">Data</h3>
+<p>See the <em><strong>Data</strong></em> section of your notebook and follow the instructions to load the MovieLens data. You can read more about this dataset <a href="https://grouplens.org/datasets/movielens/">here</a>, if you are interested.</p>
+<h3 id="cross-validation">Cross Validation</h3>
+<p><strong>Note: cross validation is currently only supported in the Python code. The R code uses a simple train-test split. If you are using R, you can skip ahead to the <em>Model 1: Random</em> section below.</strong></p>
+<p>We will be using cross validation a lot in this code in the training and evaluation of our models. This strategy builds upon the idea of a <strong>train-test</strong> split, which you should already be familiar with.</p>
+<p>Instead of doing 1 data split, though, we will do several of them. Each split of the data is called a <em><strong>fold</strong></em>. We let <code>k</code> denote the number of folds we use. <code>k=5</code> is a common number to use.</p>
+<p>This image provides a visual explanation of how cross validation works.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/K-fold_cross_validation_EN.jpg" alt="Cross validation image."></p>
+<h3 id="model-1-random">Model 1: Random</h3>
+<p>We want to first get a baseline value for our model. What better way to do that than with a <em>random</em> algorithm! Essentially, this first algorithm is not personalized to the desires of any users - we just assign them movie ratings based on the initial distribution of the data.</p>
+<p>See the <em><strong>Model 1: Random</strong></em> section of your notebook and follow the instructions to create a new model, train it on the data and evaluate the RMSE.</p>
+<h3 id="model-2-user-based-collaborative-filtering">Model 2: User-Based Collaborative Filtering</h3>
+<p>Surely, we can do much better than guessing the movie ratings randomly! Our next model will use the user-user defined notion of similarity to implement collaborative filtering.</p>
+<p>See the <em><strong>Model 2: User-Based Collaborative Filtering</strong></em> section of your notebook and follow the instructions to create a new model, train it on the data and evaluate the RMSE.</p>
+<h3 id="model-3-item-based-collaborative-filtering">Model 3: Item-Based Collaborative Filtering</h3>
+<p>Our next model will use the item-item defined notion of similarity to once again implement collaborative filtering.</p>
+<p>See the <em><strong>Model 3: Item-Based Collaborative Filtering</strong></em> section of your notebook and follow the instructions to create a new model, train it on the data and evaluate the RMSE.</p>
+<h3 id="model-4-matrix-factorization">Model 4: Matrix Factorization</h3>
+<p>Our final model for this case study will use the matrix factorization approach with the <a href="https://blog.statsbot.co/singular-value-decomposition-tutorial-52c695315254">SVD algorithm</a> to try to predict user’s movie ratings. Here, we try to determine some underlying mathematical structure in the user rating matrix, which can help us predict missing ratings in the future.</p>
+<p>See the <em><strong>Model 4: Matrix Factorization</strong></em> section of your notebook and follow the instructions to create a new model, train it on the data and evaluate the RMSE.</p>
+<h3 id="precision-and-recall--k">Precision and Recall @ <code>k</code></h3>
+<p>RMSE is not the only metric we can use here. We can also examine two fundamental measures, <a href="https://en.wikipedia.org/wiki/Precision_and_recall">precision and recall</a>. We also add a parameter <code>k</code> which is helpful in understanding problems with multiple rating outputs.</p>
+<p>See the <em><strong>Precision and Recall @ <code>k</code></strong></em> section of your notebook and follow the instructions to compute various precision/recall values at various values of <code>k</code>.</p>
+<h3 id="top-n-predictions">Top-<code>n</code> Predictions</h3>
+<p>Finally, we want to actually see what ratings the model predicts for our users. We can vary the amount of top movies we see per user by varying the value of <code>n</code>.</p>
+<p>See the <em><strong>Top-<code>n</code> Predictions</strong></em> section of your notebook and follow the instructions to compute rating predictions for some users.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>We really hope you enjoyed completing this case study and feel more comfortable about some of the learning objectives listed <a href="#objectives">above</a>.</p>
+<p>There are just a few more things you need to know before you are done.</p>
+<h3 id="submitting">Submitting</h3>
+<p>Follow these instructions to submit your responses to the MITx platform.</p>
+<ol>
+<li>
+<p><span id="export"></span><strong>Export your work.</strong> In your notebook file on Microsoft Azure Notebooks, go to <em>File &gt; Download As</em> then select <strong>HTML</strong>.</p>
+<p><img src="https://i.imgur.com/n3nCUaB.png" alt="Download button."></p>
+</li>
+<li>
+<p><span id="convert"></span><strong>Convert your file to a PDF.</strong> You can use <a href="http://html2pdf.com/">this tool</a> to do this. The MITx platform doesn’t allow HTML uploads, so we must take this in-between step.</p>
+</li>
+<li>
+<p><span id="name"></span><strong>Name your file correctly.</strong> We ask that you name your file in the following format:</p>
+<p><code>41_LastName_FirstName_mitxprousername.pdf</code></p>
+<p>For example, if you are Bob Smith and your MITx <strong>username</strong> is bobs123, then you should save your file with this name:</p>
+<p><code>41_Smith_Bob_bobs123.pdf</code></p>
+<p>This makes it easier for other students <strong>and</strong> course TA’s to identify your work and make sure you receive as much credit as possible. <strong>You can find your MITx username on your progress page <a href="https://courses.xpro.mit.edu/courses/course-v1:xPRO+DSx+R13/progress">here</a>, just to the left of your e-mail address.</strong></p>
+</li>
+<li>
+<p><span id="upload"></span><strong>Upload your file.</strong> Go to the Case Study page (see Helpful Links above), then click the <em>right tab</em>. You should see a page that looks like this:</p>
+<p><img src="https://i.imgur.com/u6FCVDn.png" alt="Submit."></p>
+<ul>
+<li>You can leave the <em>Your Response</em> field blank.</li>
+<li>Click the <em>Choose Files</em> button and select the file from your computer. This is the file you named properly in step 2 above.</li>
+<li>In the “Describe” text box, enter a description that exactly matches the <strong>name of your file</strong> (i.e. <code>41_Smith_Bob_bobs123.pdf</code>).</li>
+<li>Click the <em>Save your progress</em> button.</li>
+<li>Then, click the <em>Upload Files</em> button. If you have any issues with this, fill out the <em>Issue Submission</em> form at the bottom of the page.</li>
+<li>You can <strong>re-upload as many times as you wish</strong> before you submit. See the next bullet on how to submit.</li>
+<li>Once you are confident with the last file you have uploaded, press the blue button that says <em>Submit your response and move on to the next step</em>. If you have any issues with this, fill out the <em>Issue Submission</em> form at the bottom of the page.</li>
+</ul>
+</li>
+</ol>
+<h3 id="next-steps">Next Steps</h3>
+<p>Remember - after you submit your own work, be prepared for the system to assign you peers to review.</p>
+<p><span id="peers"></span>If the system does not give you any peers to review right away, we ask that you check back to the site again to see if you have any new reviews. It may take a few hours for a new review to come in.</p>
+<h3 id="faq">FAQ</h3>
+<p>Here are some questions we see from students often and our answers to those questions. This list is subject to change.</p>
+<hr>
+<p><span id="bad"></span>Q: <strong>I get an error about the request being too long and the notebook won’t load. What do I do?</strong></p>
+<p>You should try to clear the cache and cookies in your browser. <a href="https://kb.iu.edu/d/ahic">This page</a> has a tutorial on how to do this.</p>
+<hr>
+<p><span id="surprise-error"></span>Q: <strong>I see an error like this when I try to install <code>surpriselib</code>. What do I do?</strong></p>
+<pre><code>grpcio 1.11.0 has requirement protobuf&gt;=3.5.0.post1,
+but you'll have protobuf 3.4.1 which is incompatible.
+</code></pre>
+<p>Don’t worry! This is not an error, just a warning. (The red text is annoying, we know.) As long as you can keep running the cells below, after the installation completes, you should be all set.</p>
+<hr>
+<p><span id="red"></span>Q: <strong>I see a bunch of red text when I run a cell. It looks like an error. Does this mean my code is broken?</strong></p>
+<p>A: No, this is normal! These are just warning messages from the code. As long as the cell runs and you receive a success message, you are good to go!</p>
+<hr>
+<p>Q: <strong>I can’t get my code to work. I keep getting a package error or some other error I don’t know how to solve. What do I do?</strong></p>
+<p>A: See the <a href="#troubleshooting">troubleshooting</a> section below for help.</p>
+<hr>
+<p><span id="numbers"></span>Q: <strong>The numbers I am getting on the case study vary slightly from the ones other people are getting. Is this normal?</strong></p>
+<p>A: Yes, this is completely normal! This has to do with the way is randomly split, or the way the model trains based on the data. As long as your numbers are reasonably close to the values of others, you should be all set.</p>
+<p>Also, please note that the R and Python values may vary in comparison to one another, due to the specific algorithms that each language uses. This is also completely acceptable, as long as you have code and results to support your results.</p>
+<hr>
+<p><span id="histogram"></span>Q: <strong>The histogram image isn’t showing up in my R notebook when I generate the HTML output. What’s going on?</strong></p>
+<p>A: This is an issue with Microsoft Azure Notebooks, not you. Don’t worry. We have added language in the evaluation rubric to still give you full credit for this.</p>
+<hr>
+<p><span id="extensions"></span>Q: <strong>It’s getting really close to the submission deadline and I am struggling to make progress on the assignment. Can I get an extension? What should I do?</strong></p>
+<p>A: Unfortunately, due to the nature of the course, it is our official policy that <a href="https://courses.xpro.mit.edu/courses/course-v1:xPRO+DSx+R13/17f72f0817f741f297a29e43fa5c9c39/#schedule"><strong>no extensions will be granted</strong></a> on graded assignments.</p>
+<p>However, we encourage you to <a href="#submitting">submit</a> what you have so far. Then, if you are concerned about your grade, you can <a href="https://courses.xpro.mit.edu/courses/course-v1:xPRO+DSx+R13/courseware/49d8597f73e940a8aab76908a0bca324/09cd4c29c128436a9af382efac7f39cd/1">contact us privately</a> with our G-Mail address.</p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>Having trouble getting your code to run? Questions about a particular part of the case study? Not able to submit your assignment to MITx? Your course TA’s are here to help!</p>
+<p>Please follow these steps if you get stuck.</p>
+<ol>
+<li>
+<p>Make sure you followed all of the instructions exactly as specified.</p>
+</li>
+<li>
+<p><span id="search"></span><strong>Search</strong> the <a href="https://courses.xpro.mit.edu/courses/course-v1:xPRO+DSx+R13/discussion/forum/">Discussion Forum</a> to see if your question has already been answered.</p>
+</li>
+<li>
+<p>Please post in the <strong>Module 4: Case Studies</strong> section of the Discussion Forum and your (<em>new, unanswered</em>) question will be answered as soon as possible!</p>
+</li>
+</ol>
+<hr>
+<p><img src="https://i.imgur.com/Ngzqv87.png" alt=""></p>
+</div>
+</body>
+
+</html>
