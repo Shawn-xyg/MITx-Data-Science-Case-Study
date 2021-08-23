@@ -231,7 +231,7 @@ jupyter==1.0.0
 jupyter-client==5.2.3
 jupyter-console==6.0.0
 jupyter-core==4.4.0
-jupyterlab==0.34.12
+jupyterlab==1.2.21
 jupyterlab-launcher==0.13.1
 kafka-python==1.4.6
 kazoo==2.5.0
