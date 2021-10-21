@@ -120,7 +120,7 @@ azureml-train-automl==1.0.33
 azureml-train-core==1.0.33
 azureml-train-restclients-hyperdrive==1.0.33
 azureml-widgets==1.0.33
-Babel==2.6.0
+Babel==2.9.1
 backcall==0.1.0
 backports.shutil-get-terminal-size==1.0.0
 backports.tempfile==1.0
