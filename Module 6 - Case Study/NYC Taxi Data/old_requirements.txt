@@ -272,7 +272,7 @@ multimethods==1.0.0
 multipledispatch==0.6.0
 natsort==5.4.0
 navigator-updater==0.2.1
-nbconvert==5.4.0
+nbconvert==6.3.0
 nbformat==4.4.0
 ndg-httpsclient==0.5.1
 networkx==2.2
