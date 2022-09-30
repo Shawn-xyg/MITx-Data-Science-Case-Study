@@ -222,7 +222,7 @@ jedi==0.13.1
 jeepney==0.4
 Jinja2==2.10
 jmespath==0.9.4
-joblib==0.12.5
+joblib==1.2.0
 JsonForm==0.0.2
 jsonpickle==1.1
 jsonschema==2.6.0
